@@ -244,8 +244,8 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            width: 45%;
-            height: 90%;
+            width: 52%;
+            height: 95%;
             object-fit: contain;
             object-position: bottom right;
             filter: drop-shadow(-20px 0 40px rgba(0, 0, 0, 0.8));
@@ -254,12 +254,25 @@
 
         .hero-ebook {
             position: absolute;
-            bottom: 15%;
-            right: 8%;
-            width: 180px;
+            bottom: 8%;
+            right: 1%;
+            width: 140px;
             z-index: 20;
             filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.9));
             animation: float 4s ease-in-out infinite;
+        }
+
+        .hero-concert {
+            position: absolute;
+            top: 15%;
+            right: 2%;
+            width: 160px;
+            border-radius: 16px;
+            border: 2px solid rgba(255, 26, 26, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+            z-index: 20;
+            object-fit: cover;
+            animation: float 6s ease-in-out infinite reverse;
         }
 
         @keyframes float {
@@ -496,6 +509,10 @@
             <img src="./images/black-visor.png"
                  alt="Black Visor"
                  class="hero-character hidden lg:block">
+
+            <img src="./images/black-visor-concert.png"
+                 alt="Black Visor no Concerto"
+                 class="hero-concert hidden lg:block">
 
             <img src="./images/ebook-mockup.png"
                  alt="Ebook Controle Sua Mente"
