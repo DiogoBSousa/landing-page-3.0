@@ -1,543 +1,1161 @@
 <!DOCTYPE html>
-<!-- saved from url=(0040)https://chat.z.ai/space/b1vq62e8egz1-art -->
-<html lang="en-US" class="light"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		
-		<link rel="icon" type="image/png" sizes="512x512" href="https://z-cdn.chatglm.cn/z-ai/static/logo.svg">
-		<link rel="shortcut icon" href="https://z-cdn.chatglm.cn/z-ai/static/logo.svg">
-		<link rel="apple-touch-icon" sizes="512x512" href="https://z-cdn.chatglm.cn/z-ai/static/logo.svg">
-		<meta name="apple-mobile-web-app-title" content="Z.ai - Free AI Chatbot &amp; Agent powered by GLM-5 &amp; GLM-4.7">
-		
-		<meta name="keywords" content="GLM-4.6, GLM 4.6, GLM-4.6-Air, GLM 4.6 Air, GLM 4.5, GLM4.5, GLM4.6, Deep Research, z ai, z.ai, GLM 4.5 AI, GLM 4.6 AI, GLM AI, Chat Z, zai, Chat AI, GLM, z.ia, Chat Z AI, AI chat, chatbot, z.ai chat, free ai chat, free AI, free ai chat no login, GLM-4.5, GLM-4.5 chat, GLM-4.1V, GLM-4.5V, AI assistant chat, AI PPT, AI presentation, AI presentation maker, AI slides maker, AI slides, slide deck, pitch deck, AI deck generator, free pitch deck generator, AI PPT, AI PPT maker, AI for Google Slides, AI for PowerPoint, AI writer, AI writing assistant, AI code generator, full stack code generation, AI full stack developer, claude code, Roo Code, Cline, Kilo Code, OpenCode, Codex, Cursor, GLM Coding Plan, GLM Coding, AI Coding, code writer ai, magic design, magic design tool, AI inspiration board, visual brainstorming AI, chat with AI, AI对话, AI聊天, 聊天机器人, 免费AI聊天, AI做PPT, AI写作, AI编程, 全栈开发, 灵感画板, AI tool, AI helper, AI for students, AI for marketers, AI for content creation, ChatGPT, chatgpt free, Free ChatGPT, gpt chat, Gemini, Grok, Claude, Poe AI, YouChat, Jasper AI, deepseek, qwen, 豆包, 文心一言, AI搜问答, 写作灵感AI, 代码解释工具, PPT思路生成, 如何用AI做PPT, create pitch deck from brief, AI business plan presentation, marketing report slides, AI academic paper assistant, AI legal contract drafting, write social media calendar, AI email responder,  VS Code AI assistant, AI for Notion, AI for Figma, AI math problem solver from image, AI geoguessr solver, image to code generator, table extractor from image, chart data extractor, document analysis AI, image caption generator, visual Q&amp;A, 看图猜成语, AI拍照解题, 数学题解答, 物理题解答, GeoGuess AI, 图片转表格, 图片读数据, 看图问答, analyze video, summarize video content, generate video transcript, find object in image, what is in this picture, 视频分析, 视频内容摘要, 生成视频字幕, 图片里有什么, 识别图中物体, GLM-4.7, GLM 4.7, GLM4.7, skills, coding plan, GLM-5, GLM-5.0, GLM5, GLM 5, Pony, Pony Alpha">
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Visor - Controle Sua Mente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwindcss.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'void': '#0A0A0A',
+                        'accent': '#FF1A1A',
+                        'muted': '#888888',
+                        'card': 'rgba(20, 20, 20, 0.6)',
+                    },
+                    fontFamily: {
+                        'anton': ['Anton', 'sans-serif'],
+                        'dm': ['DM Sans', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'luxury': '28px',
+                        'luxury-lg': '36px',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --bg: #0A0A0A;
+            --fg: #FFFFFF;
+            --muted: #888888;
+            --accent: #FF1A1A;
+            --card: rgba(20, 20, 20, 0.6);
+            --border: rgba(255, 26, 26, 0.3);
+            --glass: rgba(255, 255, 255, 0.03);
+        }
 
-		<link rel="manifest" href="https://z-cdn.chatglm.cn/z-ai/frontend/static/manifest.json">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
-		
-		<meta name="referrer" content="no-referrer">
-		<link rel="search" type="application/opensearchdescription+xml" title="Z.ai - Free AI Chatbot &amp; Agent powered by GLM-5 &amp; GLM-4.7" href="https://z-cdn.chatglm.cn/z-ai/frontend/static/opensearch.xml">
-		<script async="" src="./Landing page_files/js"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-			gtag('config', 'G-Z8QTHYBHP3');
-		</script>
+        html {
+            scroll-behavior: smooth;
+        }
 
-		<script>
-			let metrics = {};
-			const observer = new PerformanceObserver((list) => {
-				const entries = list.getEntries();
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--fg);
+            overflow-x: hidden;
+        }
 
-				entries.forEach((entry) => {
-					// 根据不同的entry类型处理不同的性能指标
-					switch (entry.entryType) {
-						case 'navigation':
-							{
-								const navEntry = entry;
-								metrics = {
-									...metrics,
-									dns: navEntry.domainLookupEnd - navEntry.domainLookupStart,
-									response: navEntry.responseEnd - navEntry.responseStart,
-									dom_parse: navEntry.domInteractive - navEntry.responseEnd,
-									dom_ready: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
-									resource: navEntry.domComplete - navEntry.domContentLoadedEventEnd,
-									first_interactive: navEntry.domInteractive - navEntry.fetchStart,
-									first_byte: navEntry.responseStart - navEntry.domainLookupStart,
-									loaded: navEntry.loadEventEnd - navEntry.fetchStart
-								};
-								sessionStorage.setItem('performance', JSON.stringify(metrics));
-								// 发送性能指标到阿里云日志服务
-							}
-							break;
+        /* Noise texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 1000;
+        }
 
-						case 'paint':
-							if (entry.name === 'first-paint') {
-								metrics = {
-									...metrics,
-									first_paint: entry.startTime
-								};
-								sessionStorage.setItem('performance', JSON.stringify(metrics));
-							}
-							if (entry.name === 'first-contentful-paint') {
-								metrics = {
-									...metrics,
-									first_contentful_paint: entry.startTime
-								};
-								sessionStorage.setItem('performance', JSON.stringify(metrics));
-							}
-							break;
-					}
-				});
-			});
+        /* Ambient glow effects */
+        .ambient-glow {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            filter: blur(150px);
+            pointer-events: none;
+            z-index: 0;
+        }
 
-			// 观察的性能指标类型
-			observer.observe({
-				entryTypes: ['navigation', 'paint']
-			});
-		</script>
+        .glow-1 {
+            top: -200px;
+            right: -200px;
+            background: rgba(255, 26, 26, 0.08);
+            animation: pulse-glow 8s ease-in-out infinite;
+        }
 
-		<script>
-			function resizeIframe(obj) {
-				obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
-			}
-		</script>
+        .glow-2 {
+            bottom: 20%;
+            left: -300px;
+            background: rgba(255, 26, 26, 0.05);
+            animation: pulse-glow 10s ease-in-out infinite reverse;
+        }
 
-		<script>
-			// On page load or when changing themes, best to add inline in `head` to avoid FOUC
-			const initTheme = () => {
-				const metaThemeColorTag = document.querySelector('meta[name="theme-color"]');
-				// 取用户浏览器设置的主题
-				// const prefersTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
 
-				const prefersTheme = 'light';
+        /* Glassmorphism */
+        .glass {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
 
-				if (!localStorage?.theme) {
-					localStorage.theme = prefersTheme;
-				}
+        .glass-card {
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.8) 0%, rgba(10, 10, 10, 0.9) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow:
+                0 25px 50px -12px rgba(0, 0, 0, 0.8),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
 
-				if (localStorage.theme === 'system') {
-					document.documentElement.classList.add(prefersTheme);
-					metaThemeColorTag.setAttribute(
-						'content',
-						prefersTheme === 'light' ? '#F4F6F8' : '#141618'
-					);
-				} else if (localStorage.theme === 'light') {
-					document.documentElement.classList.add('light');
-					metaThemeColorTag.setAttribute('content', '#F4F6F8');
-				} else {
-					document.documentElement.classList.add('dark');
-					metaThemeColorTag.setAttribute('content', '#141618');
-				}
+        /* Typography */
+        .font-anton {
+            font-family: 'Anton', sans-serif;
+            letter-spacing: 0.02em;
+        }
 
-				// window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
-				// 	if (localStorage.theme === 'system') {
-				// 		if (e.matches) {
-				// 			document.documentElement.classList.add('dark');
-				// 			document.documentElement.classList.remove('light');
-				// 			metaThemeColorTag.setAttribute('content', '#141618');
-				// 		} else {
-				// 			document.documentElement.classList.add('light');
-				// 			document.documentElement.classList.remove('dark');
-				// 			metaThemeColorTag.setAttribute('content', '#F4F6F8');
-				// 		}
-				// 	}
-				// });
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
 
-				function setSplashImage() {
-					const logo = document.getElementById('logo');
-					const isDarkMode = document.documentElement.classList.contains('dark');
-					const splashContainer = document.getElementById('splash-screen');
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
 
-					if (isDarkMode) {
-						const darkImage = new Image();
-						darkImage.src = 'https://z-cdn.chatglm.cn/z-ai/static/logo.svg';
-						splashContainer.style.backgroundColor = '#141618';
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 4px;
+        }
 
-						darkImage.onload = () => {
-							logo.src = 'https://z-cdn.chatglm.cn/z-ai/static/logo.svg';
-							logo.style.filter = ''; // Ensure no inversion is applied if splash-dark.png exists
-						};
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
 
-						darkImage.onerror = () => {
-							logo.style.filter = 'invert(1)'; // Invert image if splash-dark.png is missing
-						};
-					} else {
-						splashContainer.style.backgroundColor = '#F4F6F8';
-					}
-				}
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-				// Runs after classes are assigned
-				window.addEventListener('DOMContentLoaded', setSplashImage, { once: true });
-			};
-			initTheme();
-		</script>
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
 
-		
+        .fade-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
 
-		<script>
-			// 炫酷的控制台介绍 - 根据语言显示
-			(function () {
-				// 检测用户语言偏好
-				const userLang = navigator.language || navigator.userLanguage;
-				const isChinese =
-					userLang.startsWith('zh') ||
-					userLang.includes('CN') ||
-					userLang.includes('TW') ||
-					userLang.includes('HK');
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
 
-				// 共同的 ASCII Logo
-				const logoLines = [
-					'%c███████╗     █████╗ ██╗',
-					'%c╚══███╔╝    ██╔══██╗██║',
-					'%c  ███╔╝     ███████║██║',
-					'%c ███╔╝      ██╔══██║██║',
-					'%c███████╗ ██╗██║  ██║██║',
-					'%c╚══════╝ ╚═╝╚═╝  ╚═╝╚═╝'
-				];
-				const logoColors = [
-					'color: #ff6b6b; font-family: monospace; font-size: 12px;',
-					'color: #4ecdc4; font-family: monospace; font-size: 12px;',
-					'color: #45b7d1; font-family: monospace; font-size: 12px;',
-					'color: #f9ca24; font-family: monospace; font-size: 12px;',
-					'color: #ff9ff3; font-family: monospace; font-size: 12px;',
-					'color: #6c5ce7; font-family: monospace; font-size: 12px;'
-				];
+        .fade-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
 
-				if (isChinese) {
-					// 中文版本
-					console.log(
-						'%c🚀 欢迎来到 Z.ai 🚀',
-						'color: #00d4ff; font-size: 20px; font-weight: bold; text-shadow: 0 0 10px #00d4ff;'
-					);
-					logoLines.forEach((line, index) => console.log(line, logoColors[index]));
-					console.log('');
-					console.log(
-						'%c✨ 基于开源GLM模型的智能AI助手',
-						'color: #a29bfe; font-size: 14px; font-weight: bold;'
-					);
-					console.log('%c🧠 支持文本生成、推理和深度研究', 'color: #fd79a8; font-size: 12px;');
-					console.log('%c🌍 为中英文用户量身定制', 'color: #00b894; font-size: 12px;');
-					console.log('%c💡 免费开源的ChatGPT替代方案', 'color: #fdcb6e; font-size: 12px;');
-					console.log('');
-					console.log('%c---', 'color: #ddd;');
-					console.log(
-						'%c由 ❤️ 和大量 ☕ 驱动',
-						'color: #e84393; font-size: 11px; font-style: italic;'
-					);
-					console.log('');
-					console.log(
-						'%c🚀 加入我们！我们正在招聘优秀人才！',
-						'color: #00b894; font-size: 13px; font-weight: bold;'
-					);
-					console.log(
-						'%c💼 查看职位: https://zhipu-ai.jobs.feishu.cn/s/stmyTm5lxaU',
-						'color: #0984e3; font-size: 12px; text-decoration: underline;'
-					);
-				} else {
-					// 英文版本
-					console.log(
-						'%c🚀 Welcome to Z.ai 🚀',
-						'color: #00d4ff; font-size: 20px; font-weight: bold; text-shadow: 0 0 10px #00d4ff;'
-					);
-					logoLines.forEach((line, index) => console.log(line, logoColors[index]));
-					console.log('');
-					console.log(
-						'%c✨ Advanced AI assistant powered by open-source GLM models',
-						'color: #a29bfe; font-size: 14px; font-weight: bold;'
-					);
-					console.log(
-						'%c🧠 Supports text generation, reasoning, and deep research',
-						'color: #fd79a8; font-size: 12px;'
-					);
-					console.log(
-						'%c🌍 Tailored for both English and Chinese users',
-						'color: #00b894; font-size: 12px;'
-					);
-					console.log(
-						'%c💡 Free and open-source ChatGPT alternative',
-						'color: #fdcb6e; font-size: 12px;'
-					);
-					console.log('');
-					console.log('%c---', 'color: #ddd;');
-					console.log(
-						'%cPowered by ❤️ and lots of ☕',
-						'color: #e84393; font-size: 11px; font-style: italic;'
-					);
-					console.log('');
-					console.log(
-						'%c🚀 Join us! We are hiring talented people!',
-						'color: #00b894; font-size: 13px; font-weight: bold;'
-					);
-					console.log(
-						'%c💼 View jobs: https://zhipu-ai.jobs.feishu.cn/s/stmyTm5lxaU',
-						'color: #0984e3; font-size: 12px; text-decoration: underline;'
-					);
-				}
-			})();
-		</script>
+        @media (prefers-reduced-motion: reduce) {
+            .fade-in, .fade-in-left, .fade-in-right {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
 
-		
-		<link rel="modulepreload" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/entry/start.Bgl0JArS.js">
-		<link rel="modulepreload" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BbkfKHaF.js">
-		<link rel="modulepreload" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BUua5J6T.js">
-		<link rel="modulepreload" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CLLzPxsj.js">
-		<link rel="modulepreload" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/entry/app.nrTEHNXq.js">
-		<link rel="modulepreload" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/C1FmrZbK.js">
-		<link rel="modulepreload" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DE2LdTMs.js">
-	<title>Z.ai - Free AI Chatbot &amp; Agent powered by GLM-5 &amp; GLM-4.7</title><meta name="description" content="来自 Z.AI 的精彩内容分享"><meta property="og:type" content="website"><meta property="og:site_name" content="Z.AI"><meta property="og:title" content="Z.AI 分享"><meta property="og:description" content="来自 Z.AI 的精彩内容分享"><meta property="og:image" content="https://z-cdn.chatglm.cn/z-ai/static/share-logo.png"><meta property="og:image:alt" content="Z.AI 分享"><meta property="og:image:width" content="400"><meta property="og:image:height" content="400"><meta property="og:image:type" content="image/png"><meta property="og:url" content="http://chat.z.ai/space/b1vq62e8egz1-art"><meta property="article:author" content="Z.AI"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Z.AI 分享"><meta name="twitter:description" content="来自 Z.AI 的精彩内容分享"><meta name="twitter:image" content="https://z-cdn.chatglm.cn/z-ai/static/share-logo.png"><meta name="twitter:image:alt" content="Z.AI 分享"><meta name="robots" content="index,follow"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="application-name" content="Z.AI"><meta name="theme-color" content="#1976d2"><meta name="msapplication-TileColor" content="#1976d2"><link rel="canonical" href="http://chat.z.ai/space/b1vq62e8egz1-art"><script src="./Landing page_files/jweixin-1.6.0.js.download"></script><style type="text/css" id="operaUserStyle">
-  video {
-    filter: -opera-shader(url(data:text/plain;base64,Ly8gaHR0cHM6Ly9naXRodWIuY29tL0dQVU9wZW4tRWZmZWN0cy9GaWRlbGl0eUZYLUNBUwovLyB2MwoKdW5pZm9ybSBzaGFkZXIgaUNodW5rOwp1bmlmb3JtIGZsb2F0MiBpTW91c2U7CnVuaWZvcm0gZmxvYXQ0IGlWaXNpYmxlUmVjdDsKdW5pZm9ybSBmbG9hdCBpQXJnc1sxXTsKCmNvbnN0IGZsb2F0IEVQU0lPTiA9IDAuMTsKY29uc3QgZmxvYXQgVl9NSU4gPSAwOwpjb25zdCBmbG9hdCBWX0xPVyA9IDAuMjU7CmNvbnN0IGZsb2F0IFZfTUVEID0gMC41Owpjb25zdCBmbG9hdCBWX0hJR0ggPSAwLjc1Owpjb25zdCBmbG9hdCBWX01BWCA9IDE7Cgpjb25zdCBmbG9hdCBUSFJFU0hPTERfQVJFQSA9IDgwMCAqIDYwMDsKY29uc3QgZmxvYXQgTUlOX0FSRUEgPSA0MDAgKiAxMDA7CmNvbnN0IGZsb2F0IE1JTl9TVFJJUCA9IDIwOwpjb25zdCBmbG9hdCBNQVJHSU4gPSAxOwoKaW5saW5lIGZsb2F0MyBwaXhlbChmbG9hdDIgeHksIGZsb2F0MiBvZmZzZXQpIHsKICAgIHJldHVybiBpQ2h1bmsuZXZhbCh4eSArIG9mZnNldCkucmdiOwp9CgppbmxpbmUgZmxvYXQzIHNoYXJwZW4oZmxvYXQyIHh5KSB7CiAgICBmbG9hdDMgZiA9CiAgICAgICAgcGl4ZWwoeHksIGZsb2F0MigtMSwgLTEpKSAqICAxICsKICAgICAgICBwaXhlbCh4eSwgZmxvYXQyKCAwLCAtMSkpICogLTEgKwogICAgICAgIHBpeGVsKHh5LCBmbG9hdDIoIDEsIC0xKSkgKiAgMSArCgogICAgICAgIHBpeGVsKHh5LCBmbG9hdDIoLTEsIDApKSAqIC0xICArCiAgICAgICAgcGl4ZWwoeHksIGZsb2F0MiggMCwgMCkpICogLTEgICsKICAgICAgICBwaXhlbCh4eSwgZmxvYXQyKCAxLCAwKSkgKiAtMSAgKwoKICAgICAgICBwaXhlbCh4eSwgZmxvYXQyKC0xLCAxKSkgKiAxICAgKwogICAgICAgIHBpeGVsKHh5LCBmbG9hdDIoIDAsIDEpKSAqIC0xICArCiAgICAgICAgcGl4ZWwoeHksIGZsb2F0MiggMSwgMSkpICogMTsKICAgIHJldHVybiBmIC8gLTE7Cn0KCmZsb2F0NCBSR1gyKGZsb2F0MiB4eSkgewogICAgZmxvYXQyIGNodW5rX3NpemUgPSBpVmlzaWJsZVJlY3Quenc7CiAgICBmbG9hdDQgY29sb3IgPSBpQ2h1bmsuZXZhbCh4eSk7CgogICAgaWYgKGNodW5rX3NpemUueCAqIGNodW5rX3NpemUueSA8IE1JTl9BUkVBKSB7CiAgICAgICAgcmV0dXJuIGNvbG9yOwogICAgfQoKICAgIGlmIChjaHVua19zaXplLnkgPCBNSU5fU1RSSVAgfHwgY2h1bmtfc2l6ZS54IDwgTUlOX1NUUklQKSB7CiAgICAgICAgcmV0dXJuIGNvbG9yOwogICAgfQoKICAgIGlmICh4eS54IDwgTUFSR0lOIHx8IHh5LnggPiAoY2h1bmtfc2l6ZS54IC0gTUFSR0lOKSB8fAogICAgICAgIHh5LnkgPCBNQVJHSU4gfHwgeHkueSA+IChjaHVua19zaXplLnkgLSBNQVJHSU4pKSB7CiAgICAgICAgcmV0dXJuIGNvbG9yOwogICAgfQoKICAgIHJldHVybiBmbG9hdDQoc2hhcnBlbih4eSksIDEpOwp9CgppbmxpbmUgZmxvYXQzIG1pbjN2KGZsb2F0MyB4LCBmbG9hdDMgeSwgZmxvYXQzIHopIHsKCXJldHVybiBtaW4oeCwgbWluKHksIHopKTsKfQoKaW5saW5lIGZsb2F0MyBtYXgzdihmbG9hdDMgeCwgZmxvYXQzIHksIGZsb2F0MyB6KSB7CglyZXR1cm4gbWF4KHgsIG1heCh5LCB6KSk7Cn0KCmZsb2F0MyBSR1gzKGZsb2F0MiB4eSwgZmxvYXQgc3RyZW5ndGgpIHsKICAgIGZsb2F0MyBhID0gcGl4ZWwoeHksIGZsb2F0MigtMSwgLTEpKTsKICAgIGZsb2F0MyBiID0gcGl4ZWwoeHksIGZsb2F0MiggMCwgLTEpKTsKICAgIGZsb2F0MyBjID0gcGl4ZWwoeHksIGZsb2F0MiggMSwgLTEpKTsKCiAgICBmbG9hdDMgZCA9IHBpeGVsKHh5LCBmbG9hdDIoLTEsIDApKTsKICAgIGZsb2F0MyBlID0gcGl4ZWwoeHksIGZsb2F0MiggMCwgMCkpOwogICAgZmxvYXQzIGYgPSBwaXhlbCh4eSwgZmxvYXQyKCAxLCAwKSk7CgogICAgZmxvYXQzIGcgPSBwaXhlbCh4eSwgZmxvYXQyKC0xLCAxKSk7CiAgICBmbG9hdDMgaCA9IHBpeGVsKHh5LCBmbG9hdDIoIDAsIDEpKTsKICAgIGZsb2F0MyBpID0gcGl4ZWwoeHksIGZsb2F0MiggMSwgMSkpOwoKICAgIGZsb2F0MyBtaW5fZGVmID0gbWluM3YoZCwgZSwgZik7CiAgICBmbG9hdDMgbWluX2JkZWZoID0gbWluM3YoYiwgbWluX2RlZiwgaCk7CiAgICBmbG9hdDMgbWluX2FiY2RmZ2hpID0gbWluM3YobWluM3YoYSwgbWluX2JkZWZoLCBjKSwgZywgaSk7CiAgICBmbG9hdDMgbWluM19mYWN0b3IgPSBtaW5fYmRlZmggKyBtaW5fYWJjZGZnaGk7CgogICAgZmxvYXQzIG1heF9kZWYgPSBtYXgzdihkLCBlLCBmKTsKICAgIGZsb2F0MyBtYXhfYmRlZmggPSBtYXgzdihiLCBtYXhfZGVmLCBoKTsKICAgIGZsb2F0MyBtYXhfYWJjZGZnaGkgPSBtYXgzdihtYXgzdihhLCBtaW5fYmRlZmgsIGMpLCBnLCBpKTsKICAgIGZsb2F0MyBtYXgzX2ZhY3RvciA9IG1heF9iZGVmaCArIG1heF9hYmNkZmdoaTsKCiAgICBmbG9hdDMgZmFjdG9yID0gMS4wIC8gbWF4M19mYWN0b3I7CgogICAgZmxvYXQzIGFtcCA9IHNhdHVyYXRlKG1pbihtaW4zX2ZhY3RvciwgMiAtIG1heDNfZmFjdG9yKSAqIGZhY3Rvcik7CiAgICBmbG9hdDMgYW1wX3NxcnQgPSBzcXJ0KGFtcCk7CgogICAgZmxvYXQgcGVhayA9IC0xLjAgLyAobWl4KDgsIDUsIHN0cmVuZ3RoKSk7CgogICAgZmxvYXQzIGNyb3NzX3dlaWdodHMgPSBhbXBfc3FydCAqIHBlYWs7CiAgICBmbG9hdDMgd2VpZ2h0cyA9IDEgLyAoMSArIDQgKiBjcm9zc193ZWlnaHRzKTsKCiAgICBmbG9hdDMgcmVzdWx0ID0gKChiICsgZCArIGYgKyBoKSAqIGNyb3NzX3dlaWdodHMgKyBlKSAqIHdlaWdodHM7CgogICAgcmV0dXJuIHNhdHVyYXRlKHJlc3VsdCk7Cn0KCmZsb2F0NCBtYWluKGZsb2F0MiB4eSkgewoKICAgIGZsb2F0NCBvcmlnaW5hbENvbG9yID0gaUNodW5rLmV2YWwoeHkpOwogICAgaWYgKG9yaWdpbmFsQ29sb3IuYSA8IDEpIHsKICAgICAgICByZXR1cm4gaUNodW5rLmV2YWwoeHkpOwogICAgfQoKICAgIGZsb2F0IGludGVuc2l0eSA9IGlBcmdzWzBdOwogICAgZmxvYXQgc3RyZW5ndGggPSAwOwogICAgZmxvYXQzIGNvbG9yOwoKICAgIGlmIChpbnRlbnNpdHkgPCBWX01JTiArIEVQU0lPTikgewogICAgICAgIHN0cmVuZ3RoID0gMC4xMDsKICAgICAgICBjb2xvciA9IFJHWDMoeHksIHN0cmVuZ3RoKTsKCiAgICB9IGVsc2UgaWYgKGludGVuc2l0eSA+IFZfTE9XIC0gRVBTSU9OICYmIGludGVuc2l0eSA8IFZfTE9XICsgRVBTSU9OKSB7CiAgICAgICAgc3RyZW5ndGggPSAwLjMzOwogICAgICAgIGNvbG9yID0gUkdYMyh4eSwgc3RyZW5ndGgpOwoKICAgIH0gZWxzZSBpZiAoaW50ZW5zaXR5ID4gVl9NRUQgLSBFUFNJT04gJiYgaW50ZW5zaXR5IDwgVl9NRUQgKyBFUFNJT04pIHsKICAgICAgICBzdHJlbmd0aCA9IDAuNTsKICAgICAgICBjb2xvciA9IFJHWDMoeHksIHN0cmVuZ3RoKTsKCiAgICB9IGVsc2UgaWYgKGludGVuc2l0eSA+IFZfSElHSCAtIEVQU0lPTiAmJiBpbnRlbnNpdHkgPCBWX0hJR0ggKyBFUFNJT04pIHsKICAgICAgICBzdHJlbmd0aCA9IDAuOTk7CiAgICAgICAgY29sb3IgPSBSR1gzKHh5LCBzdHJlbmd0aCk7CgogICAgfSBlbHNlIGlmIChpbnRlbnNpdHkgPiBWX01BWCAtIEVQU0lPTikgewogICAgICAgIHN0cmVuZ3RoID0gMTsKICAgICAgICBjb2xvciA9IFJHWDIoeHkpLnJnYjsKICAgIH0KCiAgICByZXR1cm4gZmxvYXQ0KGNvbG9yLCBvcmlnaW5hbENvbG9yLmEpOwp9) -opera-args(0.75 calc(env(-opera-accent-color-r, 255)/255) calc(env(-opera-accent-color-g, 255)/255) calc(env(-opera-accent-color-b, 255)/255)));
-  }
-</style>
-<script>
-(function() {
-  var frontendCallId = Math.random().toString(36).substring(2, 8);
-  console.log('[WeChat-Frontend-' + frontendCallId + '] ===== 开始前端微信JS-SDK初始化 =====');
-  console.log('[WeChat-Frontend-' + frontendCallId + '] 当前页面URL:', window.location.href);
-  console.log('[WeChat-Frontend-' + frontendCallId + '] 当前页面URL (去掉#):', window.location.href.split('#')[0]);
-  console.log('[WeChat-Frontend-' + frontendCallId + '] 签名配置:', {
-    debug: false,
-    appId: 'wxa5796e47c57570b1',
-    timestamp: 1775312038,
-    nonceStr: 'SAQslEEgujXtwBcG',
-    signature: '0e68e5d60d4096777c43670d1ed8b43757146720',
-    jsApiList: ["updateAppMessageShareData","updateTimelineShareData","onMenuShareAppMessage","onMenuShareTimeline"]
-  });
+        /* Button styles */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent) 0%, #CC1515 100%);
+            color: white;
+            font-weight: 700;
+            padding: 16px 32px;
+            border-radius: 16px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(255, 26, 26, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            position: relative;
+            overflow: hidden;
+        }
 
-  // 微信 JS-SDK 配置
-  wx.config({
-    debug: false, // 根据环境变量设置debug模式
-    appId: 'wxa5796e47c57570b1', // 公众号的唯一标识
-    timestamp: 1775312038, // 生成签名的时间戳
-    nonceStr: 'SAQslEEgujXtwBcG', // 生成签名的随机串
-    signature: '0e68e5d60d4096777c43670d1ed8b43757146720', // 签名
-    jsApiList: ["updateAppMessageShareData","updateTimelineShareData","onMenuShareAppMessage","onMenuShareTimeline"] // 需要使用的JS接口列表
-  });
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
 
-  console.log('[WeChat-Frontend-' + frontendCallId + '] wx.config() 调用完成');
+        .btn-primary:hover::before {
+            left: 100%;
+        }
 
-  // 微信 JS-SDK 就绪回调
-  wx.ready(function () {
-    console.log('[WeChat-Frontend-' + frontendCallId + '] WeChat JS-SDK ready - 微信JS-SDK就绪!');
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255, 26, 26, 0.5);
+        }
 
-    // 分享给朋友的配置
-    console.log('[WeChat-Frontend-' + frontendCallId + '] 开始配置分享给朋友...');
-    wx.updateAppMessageShareData({
-      title: 'Z.AI 分享',
-      desc: '来自 Z.AI 的精彩内容分享',
-      link: 'http://chat.z.ai/space/b1vq62e8egz1-art',
-      imgUrl: 'https://z-cdn.chatglm.cn/z-ai/static/share-logo.png',
-      success: function () {
-        console.log('[WeChat-Frontend-' + frontendCallId + '] 分享给朋友成功');
-      },
-      cancel: function () {
-        console.log('[WeChat-Frontend-' + frontendCallId + '] 分享给朋友取消');
-      }
-    });
+        .btn-primary:active {
+            transform: translateY(-1px);
+        }
 
-    // 分享到朋友圈的配置
-    console.log('[WeChat-Frontend-' + frontendCallId + '] 开始配置分享到朋友圈...');
-    wx.updateTimelineShareData({
-      title: 'Z.AI 分享',
-      link: 'http://chat.z.ai/space/b1vq62e8egz1-art',
-      imgUrl: 'https://z-cdn.chatglm.cn/z-ai/static/share-logo.png',
-      success: function () {
-        console.log('[WeChat-Frontend-' + frontendCallId + '] 分享到朋友圈成功');
-      },
-      cancel: function () {
-        console.log('[WeChat-Frontend-' + frontendCallId + '] 分享到朋友圈取消');
-      }
-    });
+        /* Navbar */
+        .navbar {
+            transition: all 0.3s ease;
+        }
 
-    // 兼容旧版本微信客户端
-    console.log('[WeChat-Frontend-' + frontendCallId + '] 开始配置兼容旧版本分享...');
-    wx.onMenuShareAppMessage({
-      title: 'Z.AI 分享',
-      desc: '来自 Z.AI 的精彩内容分享',
-      link: 'http://chat.z.ai/space/b1vq62e8egz1-art',
-      imgUrl: 'https://z-cdn.chatglm.cn/z-ai/static/share-logo.png',
-      success: function () {
-        console.log('[WeChat-Frontend-' + frontendCallId + '] 兼容版分享给朋友成功');
-      },
-      cancel: function () {
-        console.log('[WeChat-Frontend-' + frontendCallId + '] 兼容版分享给朋友取消');
-      }
-    });
+        .navbar.scrolled {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+        }
 
-    wx.onMenuShareTimeline({
-      title: 'Z.AI 分享',
-      link: 'http://chat.z.ai/space/b1vq62e8egz1-art',
-      imgUrl: 'https://z-cdn.chatglm.cn/z-ai/static/share-logo.png',
-      success: function () {
-        console.log('[WeChat-Frontend-' + frontendCallId + '] 兼容版分享到朋友圈成功');
-      },
-      cancel: function () {
-        console.log('[WeChat-Frontend-' + frontendCallId + '] 兼容版分享到朋友圈取消');
-      }
-    });
+        .navbar.scrolled .nav-logo {
+            font-size: 1.25rem;
+        }
 
-    console.log('[WeChat-Frontend-' + frontendCallId + '] 所有分享配置完成');
-  });
+        /* Hero character */
+        .hero-character {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 45%;
+            height: 90%;
+            object-fit: contain;
+            object-position: bottom right;
+            filter: drop-shadow(-20px 0 40px rgba(0, 0, 0, 0.8));
+            z-index: 10;
+        }
 
-  // 微信 JS-SDK 错误回调
-  wx.error(function(res){
-    console.error('[WeChat-Frontend-' + frontendCallId + '] 微信JS-SDK错误:', res);
-    console.error('[WeChat-Frontend-' + frontendCallId + '] 错误详情:', JSON.stringify(res, null, 2));
-    // 可以在这里处理签名验证失败等错误
-  });
+        .hero-ebook {
+            position: absolute;
+            bottom: 15%;
+            right: 8%;
+            width: 180px;
+            z-index: 20;
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.9));
+            animation: float 4s ease-in-out infinite;
+        }
 
-  console.log('[WeChat-Frontend-' + frontendCallId + '] ===== 微信JS-SDK初始化完成 =====');
-})();
-</script><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/nodes/0.BIrM62DQ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/D0QH3NT1.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BN0Yp_gx.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DEzglaFO.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/9KAAVx0_.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/cfZWqMyV.js"><link rel="stylesheet" crossorigin="" href="./Landing page_files/Toaster.uaUbY3tS.css"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DFn4vXOi.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/ByIvt-Cw.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CuzFVjFb.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/D0-bIXhl.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/czT-mWwK.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BNzHspQi.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CgU5AtxT.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/w_kYpsuc.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/GwlGowN-.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CuH5aqvx.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/l1GteXXT.js"><link rel="stylesheet" crossorigin="" href="./Landing page_files/0.Bw-DjZ0y.css"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/nodes/1.BVEs7mlc.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/nodes/31.DBYpCuW3.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/NjJCUR6C.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/B91BN-vW.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/wQxme9Ao.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BDjcejUP.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CHdVmOTV.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DMXLx9K2.js"><link rel="stylesheet" crossorigin="" href="./Landing page_files/Modal.CyLKLEmt.css"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/Bpws88PV.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BEcvR2DP.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CWCbitD2.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CgOfFtUJ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/VEs1_nuT.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/D-Db_5R8.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CikWlNKl.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CKrIv1-0.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/C9xlzPmp.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/QCHCSaEK.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/rvmJPCOY.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BJz3trj1.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DzvLOmV6.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BClZ3IHS.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CD6zYIly.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/kvLtj3pU.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BS7bbJcD.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DNpOcnYi.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DwU28_wX.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/m7c30J7s.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BA6XtsFa.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/oRdd8Ttt.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BTm2OAtp.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/rki_1pGn.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/aBe5401v.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/Cno6nTju.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CAl8oipN.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CEo4a9Wk.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/C2lUlgga.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/Vf7HqB-U.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CV1qM6vm.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/B1hYRnKb.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CXZwQfGu.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/k62mesZj.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CZXvydXR.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BERzMfFm.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DtcSht9n.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/mo07tLtJ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/ZLmQsIwB.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/hykzEWQ6.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BgWP2tqX.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DN3Gradc.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/iUck-6NJ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/ipH2WX8f.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CKSkTkwi.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/6F4g0a3Q.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CLzrqN6B.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CVbkBMdA.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BqC698NG.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CIMVQPjD.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/B4KTomly.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/B3ZjjvOZ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/-Ucdl1DJ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BwQgVi8-.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BEiT-M2E.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/b8IcCBKe.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/C8dcX9Kc.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CvEkBx6B.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/B3RB6VBz.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DgwT5BE4.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/mZx_BhgO.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/Cc0Zukjc.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/SWifFOWE.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BTbFgjzR.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/D_VkpWUX.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/C1yagrN5.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/D9_nHETc.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/Bb3IEACB.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CouJfVbS.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/C05Ox-xp.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/tGk-O93d.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/6C6x7S18.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CuNsLm6X.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BCPCfKkw.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DqvtJgPh.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/nck1-fRo.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/Dww8AWPu.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CJ_pS00e.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BeN9RLYn.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BepUdwwy.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DbA2jLwS.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CVTyEW_C.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/vtyW1cnh.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BeA0N6nf.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CM-e8o42.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DI8x3nMl.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BETc1jlT.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DcyipzyL.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DydgtcQ2.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/Cp_F0YU_.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DToQGZRC.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DFUHvj3H.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DoAWm9Vd.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/VOql_aIK.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/9RaZbOiw.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DtbSf0Aa.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BRsj_vgR.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CLZu8hjB.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/gOU3Pcn5.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/x58gZJnR.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CLU1s9FH.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DuVMLmsQ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/Crw7Xo-p.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/shIRdkaz.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/pxmnO5aN.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DexSfERJ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DNtmvIt0.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CzE-izMi.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CuHi5ARW.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/Cc642wYD.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BBdj6rdc.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DmSGiD0B.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DaCEPMQ7.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BXKYEAjF.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CNWF7z07.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/UngtfDM6.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DEG6c8de.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/sTSFrfzA.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CFZXa-F8.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DvsrW1eV.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BW-c7xKF.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BCVYTP6D.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CRsc40b3.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DP9DD_6B.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/Cglfd11F.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/0vXUlarN.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CHHI4mmL.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BnIZVVsW.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/B1MpBn5t.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CrtBVoKj.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DMIWHI0N.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/B7kRLwPv.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/BtjkMrOV.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DM-MccF_.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/CJE6DTZs.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/ByO4nPKt.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/ENFVFam_.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/D_30gF4w.js"><link rel="stylesheet" crossorigin="" href="./Landing page_files/ShareChatModal.tKu_zkJp.css"><link rel="stylesheet" crossorigin="" href="./Landing page_files/ConfirmDialog.kaSBQ3kP.css"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/B4syoXY3.js"><link rel="modulepreload" as="script" crossorigin="" href="https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/chunks/DCM-v2Z_.js"><link rel="stylesheet" crossorigin="" href="./Landing page_files/PPTViewer.DYJ9ntiN.css"></head>
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-15px) rotate(-3deg); }
+        }
 
-	<body data-sveltekit-preload-data="hover"><script src="./Landing page_files/browser-sdk.js.download" crossorigin=""></script>
-		<script>
-			const env = location.hostname === 'chat.z.ai' ? 'prod' : 'pre';
-			!(function (c, b, d, a) {
-				c[a] || (c[a] = {});
-				c[a] = {
-					pid: 'j2c03hoppk@9a8be198b65ba4b',
-					endpoint: 'https://j2c03hoppk-default-cn.rum.aliyuncs.com',
-					// 设置环境信息，参考值：'prod' | 'gray' | 'pre' | 'daily' | 'local'
-					env: env,
-					// 设置路由模式， 参考值：'history' | 'hash'
-					spaMode: 'history',
-					collectors: {
-						// 页面性能指标监听开关，默认开启
-						perf: true,
-						// WebVitals指标监听开关，默认开启
-						webVitals: false,
-						// Ajax监听开关，默认开启
-						api: true,
-						// 静态资源开关，默认开启
-						staticResource: true,
-						// JS错误监听开关，默认开启
-						jsError: true,
-						// 控制台错误监听开关，默认开启
-						consoleError: false,
-						// 用户行为监听开关，默认开启
-						action: true
-					},
-					// 链路追踪配置开关，默认关闭
-					tracing: false,
-					parseViewName(url) {
-						const pathname = new URL(url).pathname;
-						if (!pathname) {
-							return '/';
-						}
-						return pathname.replace(/(.*)\/[a-f0-9-]+$/g, '$1');
-					},
-					evaluateApi(options, response) {
-						const traceId = response?.headers?.get?.('X-Trace-Id') || 'unknown';
+        /* Card hover effects */
+        .pain-card {
+            transition: all 0.4s ease;
+        }
 
-						return {
-							name: options.url.replace(/\/[a-f0-9-]{36}/g, '/**'),
-							properties: {
-								traceId
-							}
-						};
-					}
-				};
-				with (b)
-					with (body)
-						with (insertBefore(createElement('script'), firstChild))
-							setAttribute('crossorigin', '', (src = d));
-			})(window, document, 'https://sdk.rum.aliyuncs.com/v2/browser-sdk.js', '__rum');
-		</script>
-		<div style="display: contents">
-			<script>
-				{
-					__sveltekit_platq5 = {
-						base: "",
-						assets: "https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301"
-					};
+        .pain-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255, 26, 26, 0.3);
+            box-shadow:
+                0 30px 60px -15px rgba(0, 0, 0, 0.8),
+                0 0 40px rgba(255, 26, 26, 0.1);
+        }
 
-					const element = document.currentScript.parentElement;
+        .science-card {
+            transition: all 0.4s ease;
+        }
 
-					Promise.all([
-						import("https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/entry/start.Bgl0JArS.js"),
-						import("https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.0.301/_app/immutable/entry/app.nrTEHNXq.js")
-					]).then(([kit, app]) => {
-						kit.start(app, element);
-					});
-				}
-			</script>
-		 <iframe title="html" class="w-screen h-screen" frameborder="0" sandbox="allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox" src="./Landing page_files/saved_resource.html"></iframe>  <div id="svelte-announcer" aria-live="assertive" aria-atomic="true" style="position: absolute; left: 0px; top: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); overflow: hidden; white-space: nowrap; width: 1px; height: 1px;"></div></div>
+        .science-card:hover {
+            transform: scale(1.02);
+            border-color: rgba(255, 26, 26, 0.4);
+        }
 
-		
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
 
-		<script>
-			var token = localStorage.getItem('token');
-			var base = window.WEBUI_BASE_URL || '';
-			var lang = localStorage.locale ?? (navigator.language.includes('zh') ? 'zh-CN' : 'en-US');
-			var config = {
-				credentials: 'include',
-				headers: {
-					Accept: 'application/json',
-					'Content-Type': 'application/json',
-					...(token ? { Authorization: `Bearer ${token}` } : {}),
-					'Accept-Language': lang
-				}
-			};
+        .faq-question {
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
 
-			window.GLOBAL_FETCHES = {
-				session: fetch(`${base}/api/v1/auths/`, config).then(async (res) => {
-					if (res.status === 401) {
-						location.replace('/auth');
-					}
-					if (!res.ok) throw await res.json();
-					return res.json();
-				}),
-				config: fetch(`${base}/api/config`, config).then(async (res) => {
-					if (!res.ok) throw await res.json();
-					return res.json();
-				}),
-				models: token && fetch(`${base}/api/models`, config),
-				settings:
-					token &&
-					fetch(`${base}/api/v1/users/user/settings`, config).then(async (res) => {
-						if (!res.ok) throw await res.json();
-						return res.json();
-					})
-			};
-		</script>
-		<script async="" src="./Landing page_files/jquery.min.js.download"></script>
-	
+        .faq-question:hover {
+            color: var(--accent);
+        }
 
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
 
-<style type="text/css" nonce="">
-	html {
-		overflow-y: hidden !important;
-	}
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 20px;
+        }
 
-	#splash-screen {
-		background: #f4f6f8;
-	}
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
 
-	html.dark #splash-screen {
-		background: #141618;
-	}
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
 
-	#progress-background {
-		display: none;
-	}
+        /* Social proof bar animation */
+        .social-scroll {
+            animation: scroll-left 30s linear infinite;
+        }
 
-	#progress-bar {
-		display: none;
-	}
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
 
-	html.her #logo {
-		display: none;
-	}
+        /* Gradient text */
+        .text-gradient {
+            background: linear-gradient(135deg, #FFFFFF 0%, #888888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-	html.her #progress-background {
-		display: block;
-	}
+        /* Accent border glow */
+        .accent-border {
+            border: 1px solid rgba(255, 26, 26, 0.4);
+            box-shadow:
+                0 0 20px rgba(255, 26, 26, 0.1),
+                inset 0 0 20px rgba(255, 26, 26, 0.05);
+        }
 
-	html.her #progress-bar {
-		display: block;
-	}
+        /* Mobile menu */
+        .mobile-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-20px);
+            transition: all 0.3s ease;
+        }
 
-	@media (max-width: 24rem) {
-		html.her #progress-background {
-			display: none;
-		}
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
 
-		html.her #progress-bar {
-			display: none;
-		}
-	}
+        /* Price tag */
+        .price-tag {
+            background: linear-gradient(135deg, rgba(255, 26, 26, 0.2) 0%, rgba(255, 26, 26, 0.1) 100%);
+            border: 2px solid var(--accent);
+            animation: pulse-border 2s ease-in-out infinite;
+        }
 
-	@keyframes pulse {
-		50% {
-			opacity: 0.65;
-		}
-	}
+        @keyframes pulse-border {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 26, 26, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(255, 26, 26, 0.5); }
+        }
 
-	.animate-pulse-fast {
-		animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-	}
-</style>
-</body></html>
+        /* Focus states for accessibility */
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 4px;
+        }
+    </style>
+</head>
+<body class="font-dm">
+    <!-- Ambient glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 py-5 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="nav-logo font-anton text-2xl md:text-3xl tracking-wider transition-all duration-300">
+                BLACK <span class="text-accent">VISOR</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#conteudo" class="text-muted hover:text-white transition-colors">Conteudo</a>
+                <a href="#metodo" class="text-muted hover:text-white transition-colors">Metodo</a>
+                <a href="#faq" class="text-muted hover:text-white transition-colors">FAQ</a>
+            </div>
+
+            <a href="https://pay.kiwify.com.br/4ARxS8O" target="_blank" rel="noopener" class="btn-primary text-sm">
+                QUERO O EBOOK
+            </a>
+
+            <!-- Mobile menu button -->
+            <button class="md:hidden text-white p-2" id="mobile-menu-btn" aria-label="Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu md:hidden absolute top-full left-0 right-0 bg-void/95 backdrop-blur-xl border-t border-white/5" id="mobile-menu">
+            <div class="flex flex-col p-6 gap-4">
+                <a href="#conteudo" class="text-muted hover:text-white transition-colors py-2">Conteudo</a>
+                <a href="#metodo" class="text-muted hover:text-white transition-colors py-2">Metodo</a>
+                <a href="#faq" class="text-muted hover:text-white transition-colors py-2">FAQ</a>
+                <a href="https://pay.kiwify.com.br/4ARxS8O" target="_blank" rel="noopener" class="btn-primary text-center mt-4">
+                    QUERO O EBOOK
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center pt-24 pb-12 px-4 md:px-8 overflow-hidden">
+        <!-- Background gradient mesh -->
+        <div class="absolute inset-0 bg-gradient-to-br from-void via-void to-[#0F0808]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,26,26,0.08)_0%,transparent_50%)]"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto w-full">
+            <div class="max-w-2xl">
+                <!-- Tag -->
+                <div class="fade-in inline-block mb-6">
+                    <span class="inline-block px-4 py-2 bg-accent/10 border border-accent/40 text-accent text-sm font-semibold tracking-wider rounded-full">
+                        NEUROCIENCIA APLICADA
+                    </span>
+                </div>
+
+                <!-- Title -->
+                <h1 class="fade-in font-anton text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-none mb-6 text-white">
+                    CONTROLE SUA MENTE<br>
+                    <span class="text-accent">ANTES QUE ELA TE CONTROLE</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="fade-in text-muted text-lg md:text-xl mb-8 leading-relaxed max-w-xl">
+                    Descubra como reprogramar seu cerebro usando principios de neurociencia comportamental. Acabe com a procrastinacao, ansiedade e padroes autodestrutivos em 21 dias.
+                </p>
+
+                <!-- Bullets -->
+                <div class="fade-in space-y-4 mb-10">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <svg class="text-accent" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L4 12l8 10 8-10L12 2z"/>
+                            </svg>
+                        </div>
+                        <span class="text-white text-lg">Tecnicas validadas por estudos de Harvard e MIT</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <svg class="text-accent" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L4 12l8 10 8-10L12 2z"/>
+                            </svg>
+                        </div>
+                        <span class="text-white text-lg">Metodo pratico: 15 minutos por dia</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <svg class="text-accent" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L4 12l8 10 8-10L12 2z"/>
+                            </svg>
+                        </div>
+                        <span class="text-white text-lg">Mais de 15.000 vidas transformadas</span>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="fade-in">
+                    <a href="https://pay.kiwify.com.br/4ARxS8O" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-3 text-lg">
+                        QUERO TOMAR CONTROLE
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <p class="text-muted text-sm mt-4">Acesso imediato apos confirmacao do pagamento</p>
+                </div>
+            </div>
+
+            <!-- Hero images -->
+            <img src="./images/black-visor.png"
+                 alt="Black Visor"
+                 class="hero-character hidden lg:block">
+
+            <img src="./images/ebook-mockup.png"
+                 alt="Ebook Controle Sua Mente"
+                 class="hero-ebook hidden lg:block">
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <svg class="text-muted" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF BAR -->
+    <section class="relative border-y border-accent/30 bg-gradient-to-r from-void via-[#0F0808] to-void py-6 overflow-hidden">
+        <div class="social-scroll flex items-center gap-12 whitespace-nowrap">
+            <div class="flex items-center gap-3">
+                <span class="text-accent font-bold text-2xl">4.9</span>
+                <div class="flex gap-1">
+                    <svg class="text-accent" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg class="text-accent" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg class="text-accent" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg class="text-accent" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg class="text-accent" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <span class="text-muted">+15.000 alunos</span>
+            </div>
+            <span class="text-accent">|</span>
+            <span class="text-muted">Metodo validado por neurocientistas</span>
+            <span class="text-accent">|</span>
+            <span class="text-muted">Garantia de 7 dias</span>
+            <span class="text-accent">|</span>
+            <span class="text-muted">Acesso vitalicio</span>
+            <span class="text-accent">|</span>
+            <div class="flex items-center gap-3">
+                <span class="text-accent font-bold text-2xl">4.9</span>
+                <div class="flex gap-1">
+                    <svg class="text-accent" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg class="text-accent" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg class="text-accent" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg class="text-accent" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg class="text-accent" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <span class="text-muted">+15.000 alunos</span>
+            </div>
+            <span class="text-accent">|</span>
+            <span class="text-muted">Metodo validado por neurocientistas</span>
+            <span class="text-accent">|</span>
+            <span class="text-muted">Garantia de 7 dias</span>
+            <span class="text-accent">|</span>
+            <span class="text-muted">Acesso vitalicio</span>
+        </div>
+    </section>
+
+    <!-- PAIN SECTION -->
+    <section class="py-20 md:py-28 px-4 md:px-8 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="fade-in font-anton text-3xl sm:text-4xl md:text-5xl mb-6">
+                    VOCE SE RECONHECE NISSO?
+                </h2>
+                <p class="fade-in text-muted text-lg max-w-2xl mx-auto">
+                    Seu cerebro esta operando contra voce. Esses sao os sinais de um sistema neural desregulado.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Pain Card 1 -->
+                <div class="fade-in pain-card glass-card rounded-luxury p-8">
+                    <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+                        <svg class="text-accent" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-anton text-xl mb-3">Procrastinacao Cronica</h3>
+                    <p class="text-muted">Voce sabe o que precisa fazer, mas seu cerebro encontra mil desculpas para nao fazer. O tempo passa e nada muda.</p>
+                </div>
+
+                <!-- Pain Card 2 -->
+                <div class="fade-in pain-card glass-card rounded-luxury p-8">
+                    <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+                        <svg class="text-accent" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/>
+                            <path d="M12 8v4M12 16h.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-anton text-xl mb-3">Ansiedade Constante</h3>
+                    <p class="text-muted">Sua mente nao para. Pensamentos acelerados, preocupacoes com o futuro, dificuldade para relaxar ate mesmo de noite.</p>
+                </div>
+
+                <!-- Pain Card 3 -->
+                <div class="fade-in pain-card glass-card rounded-luxury p-8">
+                    <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+                        <svg class="text-accent" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 6L6 18M6 6l12 12"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-anton text-xl mb-3">Auto-Sabotagem</h3>
+                    <p class="text-muted">Toda vez que esta prestes a conseguir algo, algo da errado. Voce mesma mina seus proprios esforcos sem entender o porquê.</p>
+                </div>
+
+                <!-- Pain Card 4 -->
+                <div class="fade-in pain-card glass-card rounded-luxury p-8">
+                    <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+                        <svg class="text-accent" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M2 12h20"/>
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-anton text-xl mb-3">Falta de Foco</h3>
+                    <p class="text-muted">Dificuldade extrema de concentracao. Voce comeca 10 coisas e termina nenhuma. Distrações vencem toda hora.</p>
+                </div>
+
+                <!-- Pain Card 5 -->
+                <div class="fade-in pain-card glass-card rounded-luxury p-8">
+                    <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+                        <svg class="text-accent" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-anton text-xl mb-3">Relacionamentos Afetados</h3>
+                    <p class="text-muted">Seu estado mental prejudica quem voce ama. Irritacao, isolamento, dificuldade de conexao emocional real.</p>
+                </div>
+
+                <!-- Pain Card 6 -->
+                <div class="fade-in pain-card glass-card rounded-luxury p-8">
+                    <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+                        <svg class="text-accent" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-anton text-xl mb-3">Estagnacao na Carreira</h3>
+                    <p class="text-muted">Voce tem potencial, mas nao consegue evoluir. Parece que todos avancam menos voce. Frustracao diaria.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCIENCE SECTION -->
+    <section class="py-20 md:py-28 px-4 md:px-8 relative bg-gradient-to-b from-void via-[#0C0808] to-void">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,26,26,0.05)_0%,transparent_70%)]"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="fade-in font-anton text-3xl sm:text-4xl md:text-5xl mb-6">
+                    SEU CEREBRO TEM UM BUG.<br><span class="text-accent">A CIENCIA PROVA.</span>
+                </h2>
+                <p class="fade-in text-muted text-lg max-w-2xl mx-auto">
+                    Estudos de neurociencia revelam que 95% das suas decisoes sao inconscientes. Voce acha que esta no controle, mas nao esta.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Science Card 1 -->
+                <div class="fade-in science-card glass-card rounded-luxury-lg p-10 text-center">
+                    <div class="font-anton text-6xl md:text-7xl text-accent mb-6">95%</div>
+                    <h3 class="font-anton text-xl mb-4">Das Decisoes Sao Inconscientes</h3>
+                    <p class="text-muted">Seu cerebro processa 11 milhoes de bits por segundo, mas voce so tem consciencia de 40. O resto? Piloto automatico.</p>
+                </div>
+
+                <!-- Science Card 2 -->
+                <div class="fade-in science-card glass-card rounded-luxury-lg p-10 text-center">
+                    <div class="font-anton text-6xl md:text-7xl text-accent mb-6">72h</div>
+                    <h3 class="font-anton text-xl mb-4">Para Criar Nova Sinapse</h3>
+                    <p class="text-muted">Em apenas 72 horas de pratica deliberada, seu cerebro comeca a criar novas conexoes neurais. Neuroplasticidade em acao.</p>
+                </div>
+
+                <!-- Science Card 3 -->
+                <div class="fade-in science-card glass-card rounded-luxury-lg p-10 text-center">
+                    <div class="font-anton text-6xl md:text-7xl text-accent mb-6">21d</div>
+                    <h3 class="font-anton text-xl mb-4">Para Quebrar Um Habito</h3>
+                    <p class="text-muted">Pesquisas mostram que 21 dias e o tempo medio para reprogramar um padrao neural. E exatamente isso que voce vai fazer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT SECTION -->
+    <section id="conteudo" class="py-20 md:py-28 px-4 md:px-8 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="fade-in font-anton text-3xl sm:text-4xl md:text-5xl mb-6">
+                    O QUE VOCE VAI APRENDER
+                </h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Ebook mockup -->
+                <div class="fade-in-left flex justify-center lg:justify-start">
+                    <img src="./images/ebook-mockup.png"
+                         alt="Mockup do Ebook"
+                         class="max-w-sm w-full rounded-luxury shadow-2xl"
+                         style="box-shadow: 0 40px 80px -20px rgba(255, 26, 26, 0.2);">
+                </div>
+
+                <!-- Content list -->
+                <div class="fade-in-right space-y-6">
+                    <div class="glass-card rounded-luxury p-6 flex gap-5 items-start">
+                        <div class="w-10 h-10 rounded-lg bg-accent flex items-center justify-center flex-shrink-0 font-anton text-white">01</div>
+                        <div>
+                            <h3 class="font-anton text-lg mb-2">Arquitetura Mental</h3>
+                            <p class="text-muted text-sm">Entenda como seu cerebro cria padroes e como hackear esse sistema para seu beneficio.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-luxury p-6 flex gap-5 items-start">
+                        <div class="w-10 h-10 rounded-lg bg-accent flex items-center justify-center flex-shrink-0 font-anton text-white">02</div>
+                        <div>
+                            <h3 class="font-anton text-lg mb-2">Protocolo de Foco Absoluto</h3>
+                            <p class="text-muted text-sm">Tecnicas usadas por neurocirurgioes para manter concentracao maxima por horas.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-luxury p-6 flex gap-5 items-start">
+                        <div class="w-10 h-10 rounded-lg bg-accent flex items-center justify-center flex-shrink-0 font-anton text-white">03</div>
+                        <div>
+                            <h3 class="font-anton text-lg mb-2">Eliminador de Ansiedade</h3>
+                            <p class="text-muted text-sm">O metodo cientifico para desativar gatilhos de ansiedade em menos de 60 segundos.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-luxury p-6 flex gap-5 items-start">
+                        <div class="w-10 h-10 rounded-lg bg-accent flex items-center justify-center flex-shrink-0 font-anton text-white">04</div>
+                        <div>
+                            <h3 class="font-anton text-lg mb-2">Reprogramacao de Crencas</h3>
+                            <p class="text-muted text-sm">Como identificar e substituir crenças limitantes que te seguram ha anos.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-luxury p-6 flex gap-5 items-start">
+                        <div class="w-10 h-10 rounded-lg bg-accent flex items-center justify-center flex-shrink-0 font-anton text-white">05</div>
+                        <div>
+                            <h3 class="font-anton text-lg mb-2">Sistema de Habitos Elite</h3>
+                            <p class="text-muted text-sm">O passo a passo para criar habits de alta performance que grudam de verdade.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRANSFORMATION SECTION -->
+    <section class="py-20 md:py-28 px-4 md:px-8 relative bg-gradient-to-b from-void via-[#0C0808] to-void">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="fade-in font-anton text-3xl sm:text-4xl md:text-5xl mb-6">
+                    DE ONDE EU SAIA PARA ONDE CHEGUEI
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Before Card -->
+                <div class="fade-in glass-card rounded-luxury-lg p-8 border-l-4 border-muted relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-muted/20 px-3 py-1 rounded-full">
+                        <span class="text-muted text-sm font-semibold">ANTES</span>
+                    </div>
+                    <h3 class="font-anton text-2xl text-muted mb-6">A Vida Que Eu Tinha</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg class="text-muted mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="8"/>
+                            </svg>
+                            <span class="text-muted">Acordava cansado, sem motivacao para nada</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="text-muted mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="8"/>
+                            </svg>
+                            <span class="text-muted">Procrastinava projetos importantes por meses</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="text-muted mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="8"/>
+                            </svg>
+                            <span class="text-muted">Ansiedade que paralisava minhas decisoes</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="text-muted mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="8"/>
+                            </svg>
+                            <span class="text-muted">Relacionamentos deteriorando por estresse</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="text-muted mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="8"/>
+                            </svg>
+                            <span class="text-muted">Sentia que minha mente me controlava</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- After Card -->
+                <div class="fade-in glass-card rounded-luxury-lg p-8 border-l-4 border-accent relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-accent/20 px-3 py-1 rounded-full">
+                        <span class="text-accent text-sm font-semibold">DEPOIS</span>
+                    </div>
+                    <h3 class="font-anton text-2xl text-white mb-6">A Vida Que Eu Tenho</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg class="text-accent mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L4 12l8 10 8-10L12 2z"/>
+                            </svg>
+                            <span class="text-white">Acordo com energia e proposito claro</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="text-accent mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L4 12l8 10 8-10L12 2z"/>
+                            </svg>
+                            <span class="text-white">Executo projetos com consistencia brutal</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="text-accent mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L4 12l8 10 8-10L12 2z"/>
+                            </svg>
+                            <span class="text-white">Mente calma e decisoes rapidas</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="text-accent mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L4 12l8 10 8-10L12 2z"/>
+                            </svg>
+                            <span class="text-white">Conexoes profundas e autenticas</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="text-accent mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L4 12l8 10 8-10L12 2z"/>
+                            </svg>
+                            <span class="text-white">Eu controlo minha mente, nao o contrario</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY IT WORKS SECTION -->
+    <section id="metodo" class="py-20 md:py-28 px-4 md:px-8 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="fade-in font-anton text-3xl sm:text-4xl md:text-5xl mb-6">
+                    POR QUE FUNCIONA
+                </h2>
+                <p class="fade-in text-muted text-lg max-w-2xl mx-auto">
+                    Este nao e mais um ebook motivacional. E um protocolo cientifico baseado em evidencias.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="fade-in glass-card rounded-luxury p-6 text-center group hover:border-accent/30 transition-all duration-300">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
+                        <svg class="text-accent" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <path d="M22 4L12 14.01l-3-3"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-anton text-lg mb-2">Base Cientifica</h3>
+                    <p class="text-muted text-sm">Todo metodo e fundamentado em estudos de neurociencia comportamental.</p>
+                </div>
+
+                <div class="fade-in glass-card rounded-luxury p-6 text-center group hover:border-accent/30 transition-all duration-300">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
+                        <svg class="text-accent" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 20V10M18 20V4M6 20v-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-anton text-lg mb-2">Progressivo</h3>
+                    <p class="text-muted text-sm">Exercicios que evoluem com voce, do basico ao avancado em 21 dias.</p>
+                </div>
+
+                <div class="fade-in glass-card rounded-luxury p-6 text-center group hover:border-accent/30 transition-all duration-300">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
+                        <svg class="text-accent" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-anton text-lg mb-2">Pratico</h3>
+                    <p class="text-muted text-sm">Sem teoria abstrata. Cada pagina tem uma acao concreta para aplicar.</p>
+                </div>
+
+                <div class="fade-in glass-card rounded-luxury p-6 text-center group hover:border-accent/30 transition-all duration-300">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
+                        <svg class="text-accent" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-anton text-lg mb-2">Comunidade</h3>
+                    <p class="text-muted text-sm">Acesso a grupo exclusivo com +15.000 pessoas na mesma jornada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-20 md:py-28 px-4 md:px-8 relative bg-gradient-to-b from-void via-[#0C0808] to-void">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="fade-in font-anton text-3xl sm:text-4xl md:text-5xl mb-6">
+                    PERGUNTAS FREQUENTES
+                </h2>
+            </div>
+
+            <div class="fade-in space-y-4">
+                <!-- FAQ 1 -->
+                <div class="faq-item glass-card rounded-luxury">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+                        <span class="font-anton text-lg">Como recebo o ebook?</span>
+                        <svg class="faq-icon text-accent flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 text-muted">
+                        <p>Imediatamente apos a confirmacao do pagamento, voce recebe um email com o link para download do ebook em PDF. Acesso vitalicio e permanente.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item glass-card rounded-luxury">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+                        <span class="font-anton text-lg">Preciso de conhecimento previo?</span>
+                        <svg class="faq-icon text-accent flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 text-muted">
+                        <p>Nao. O ebook foi escrito para ser acessivel a qualquer pessoa, independentemente de formacao ou conhecimento previo. Explicamos cada conceito de forma clara e pratica.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item glass-card rounded-luxury">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+                        <span class="font-anton text-lg">Quanto tempo leva para ver resultados?</span>
+                        <svg class="faq-icon text-accent flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 text-muted">
+                        <p>Muitos alunos relatam mudancas perceptiveis na primeira semana. O protocolo completo de 21 dias e suficiente para criar novas conexoes neurais e estabelecer padroes duradouros.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item glass-card rounded-luxury">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+                        <span class="font-anton text-lg">Tem garantia?</span>
+                        <svg class="faq-icon text-accent flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 text-muted">
+                        <p>Sim. Voce tem 7 dias de garantia incondicional. Se por qualquer motivo nao ficar satisfeito, devolvemos 100% do seu dinheiro, sem perguntas.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item glass-card rounded-luxury">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+                        <span class="font-anton text-lg">Posso ler no celular?</span>
+                        <svg class="faq-icon text-accent flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 text-muted">
+                        <p>Sim. O ebook esta em formato PDF universal, compativel com celulares, tablets, computadores e leitores de ebook. Leia onde e quando quiser.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section class="py-20 md:py-28 px-4 md:px-8 relative">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,26,26,0.08)_0%,transparent_60%)]"></div>
+
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <h2 class="fade-in font-anton text-3xl sm:text-4xl md:text-5xl mb-6">
+                PRONTO PARA TOMAR O CONTROLE?
+            </h2>
+            <p class="fade-in text-muted text-lg mb-10 max-w-2xl mx-auto">
+                Sua mente vai continuar te controlando ate voce decidir mudar. Essa decisao e agora.
+            </p>
+
+            <!-- Ebook mockup -->
+            <div class="fade-in mb-10 flex justify-center">
+                <img src="./images/ebook-mockup.png"
+                     alt="Ebook Controle Sua Mente"
+                     class="max-w-xs w-full rounded-luxury"
+                     style="box-shadow: 0 40px 80px -20px rgba(255, 26, 26, 0.3);">
+            </div>
+
+            <!-- Price -->
+            <div class="fade-in mb-8">
+                <p class="text-muted mb-2">Investimento unico</p>
+                <div class="price-tag inline-block px-8 py-4 rounded-2xl">
+                    <span class="font-anton text-5xl md:text-6xl text-accent">R$ 47,00</span>
+                </div>
+                <p class="text-muted mt-3">Pagamento seguro via Kiwify</p>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="fade-in">
+                <a href="https://pay.kiwify.com.br/4ARxS8O" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-3 text-xl px-10 py-5">
+                    QUERO O EBOOK AGORA
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Trust badges -->
+            <div class="fade-in flex flex-wrap justify-center gap-6 mt-10 text-muted text-sm">
+                <div class="flex items-center gap-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span>Compra Segura</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12a9 9 0 1 1-9-9"/>
+                        <path d="M21 3v6h-6"/>
+                    </svg>
+                    <span>7 Dias de Garantia</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                        <path d="M22 4L12 14.01l-3-3"/>
+                    </svg>
+                    <span>Acesso Imediato</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/5 py-10 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="font-anton text-xl">
+                    BLACK <span class="text-accent">VISOR</span>
+                </div>
+                <div class="flex gap-6 text-muted text-sm">
+                    <a href="#" class="hover:text-white transition-colors">Termos de Uso</a>
+                    <a href="#" class="hover:text-white transition-colors">Politica de Privacidade</a>
+                    <a href="#" class="hover:text-white transition-colors">Contato</a>
+                </div>
+                <p class="text-muted text-sm">
+                    2024 Black Visor. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize variables first
+        const navbar = document.querySelector('.navbar');
+        const faqItems = document.querySelectorAll('.faq-item');
+        const fadeElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Navbar scroll effect
+        function handleScroll() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Mobile menu toggle
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking links
+        document.querySelectorAll('#mobile-menu a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // FAQ accordion
+        faqItems.forEach(function(item) {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', function() {
+                const isActive = item.classList.contains('active');
+
+                // Close all items
+                faqItems.forEach(function(otherItem) {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                    question.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // Scroll reveal animation with IntersectionObserver
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry, index) {
+                if (entry.isIntersecting) {
+                    // Stagger the animation
+                    setTimeout(function() {
+                        entry.target.classList.add('visible');
+                    }, index * 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Check for reduced motion preference
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!prefersReducedMotion) {
+            fadeElements.forEach(function(el) {
+                observer.observe(el);
+            });
+        } else {
+            // If reduced motion is preferred, show all elements immediately
+            fadeElements.forEach(function(el) {
+                el.classList.add('visible');
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                e.preventDefault();
+                const target = document.querySelector(targetId);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: prefersReducedMotion ? 'auto' : 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
